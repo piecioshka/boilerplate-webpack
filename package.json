@@ -1,0 +1,36 @@
+{
+    "private": true,
+    "name": "boilerplate-webpack",
+    "version": "1.0.0",
+    "description": "Starter with Webpack",
+    "license": "MIT",
+    "author": {
+        "name": "Piotr Kowalski",
+        "email": "piecioshka@gmail.com",
+        "url": "https://piecioshka.pl"
+    },
+    "scripts": {
+        "clear": "rm -rf dist/",
+        "clear:all": "rm -rf node_modules/ && npm run clear",
+        "prebuild": "npm run clear",
+        "build": "npm run build:development",
+        "build:development": "webpack --config webpack/builds/webpack.config.dev.js",
+        "build:production": "webpack --config webpack/builds/webpack.config.prod.js",
+        "watch": "npm run build:development -- -w",
+        "start": "http-server dist/ -c-1",
+        "dev": "webpack-dev-server --config webpack/builds/webpack.config.dev.js"
+    },
+    "devDependencies": {
+        "file-loader": "^6.2.0",
+        "http-server": "^14.1.0",
+        "webpack": "^5.66.0",
+        "webpack-bundle-analyzer": "^4.9.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.7.3",
+        "webpack-merge": "^5.8.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/piecioshka/boilerplate-webpack"
+    }
+}
