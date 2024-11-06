@@ -31,6 +31,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/piecioshka/boilerplate-webpack"
+        "url": "git+https://github.com/piecioshka/boilerplate-webpack.git"
     }
 }
